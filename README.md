@@ -129,6 +129,7 @@ server {
 
 Explaining The API Details.
 
+```shell
 1. User:-
 `User` module has fields like name, email, password, role. 
 There are two roles `customer` and `admin`.
@@ -181,6 +182,7 @@ Update Cuisine of a particular Restaurant: `http://127.0.0.1/api/v1/restaurant/:
 
 @Private: [Allowed: `admin`]
 Delete Cuisine of a particular Restaurant: `http://127.0.0.1/api/v1/restaurant/:restaurantId/cuisines/:cuisineId`
+```
 
 @Private: [Allowed: `admin`]
 Upload a photo of Cuisine: `http://127.0.0.1/api/v1/restaurant/:id/photo`
