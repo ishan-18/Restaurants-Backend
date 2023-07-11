@@ -124,3 +124,63 @@ server {
     }       
 }
 ```
+
+----------------------------------------------------------------------------------------------------------
+
+Explaining The API Details.
+
+1. User:-
+`User` module has fields like name, email, password, role. 
+There are two roles `customer` and `admin`.
+
+@Public
+Get all Users: `http://127.0.0.1/api/v1/user`
+
+@Public
+User Registration: `http://127.0.0.1/api/user/register`
+
+@Public
+User Login: `http://127.0.0.1/api/user/login`
+
+@Public
+User Logout: `http://127.0.0.1/api/user/logout`
+
+@Private: [Allowed: `customer` & `admin`]
+User Details: `http://127.0.0.1/api/user/me`
+
+
+2. Restaurant:-
+`Restaurant` module has fields like name, branch, address, phone, pictures, title, subtitle, availability. 
+
+@Public
+Get all Restaurants: `http://127.0.0.1/api/v1/restaurant`
+
+@Public
+Get Single Restaurant: `http://127.0.0.1/api/v1/restaurant/:id`
+
+@Private: [Allowed: `admin`]
+Create Restaurant: `http://127.0.0.1/api/v1/restaurant`
+
+@Private: [Allowed: `admin`]
+Update Restaurant: `http://127.0.0.1/api/v1/restaurant/:id`
+
+@Private: [Allowed: `admin`]
+Delete Restaurant: `http://127.0.0.1/api/v1/restaurant/:id`
+
+@Private: [Allowed: `customer`]
+Get all Cuisines of a particular Restaurant: `http://127.0.0.1/api/v1/restaurant/:id/cuisines`
+
+@Private: [Allowed: `admin`]
+Add Cuisine to a particular Restaurant: `http://127.0.0.1/api/v1/restaurant/:id/cuisines`
+
+@Private: [Allowed: `admin`]
+Update Cuisine of a particular Restaurant: `http://127.0.0.1/api/v1/restaurant/:restaurantId/cuisines/:cuisineId`
+
+@Private: [Allowed: `admin`]
+Delete Cuisine of a particular Restaurant: `http://127.0.0.1/api/v1/restaurant/:restaurantId/cuisines/:cuisineId`
+
+@Private: [Allowed: `admin`]
+Upload a photo of Cuisine: `http://127.0.0.1/api/v1/restaurant/:id/photo`
+
+
+
