@@ -155,6 +155,9 @@ User Details: `http://127.0.0.1/api/user/me`
 @Public
 Get all Restaurants: `http://127.0.0.1/api/v1/restaurant`
 
+@Public 
+Search Restaurants: `http://127.0.0.1/api/v1/restaurant?name=value`
+
 @Public
 Get Single Restaurant: `http://127.0.0.1/api/v1/restaurant/:id`
 
